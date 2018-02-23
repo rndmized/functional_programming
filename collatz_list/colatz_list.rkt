@@ -19,4 +19,4 @@
 
 (define (collatz_list n) (if(> n 1) (cons n (collatz_list (if(odd? n) (+ (* n 3) 1) (/ n 2)))) (cons 1 null) ))
 
-(collatz_list 9)
+(print (collatz_list 9))

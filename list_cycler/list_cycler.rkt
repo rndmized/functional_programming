@@ -11,7 +11,17 @@
 
 (define (lcycle l) (append (cdr l) (list (car l))))
 
-(define (rcycle l) ( cons (car (reverse l))  (reverse (cdr (reverse l ) ) ) ) ) 
+
+(define (reverse-helper list item)
+  (if (null? list)
+      item
+      (reverse-helper (cdr list) (cons (car list) item))))
+
+(define (reverser list)
+  (reverse-helper list '()))
+
+
+(define (rcycle l) ( cons (car (reverser l))  (reverser (cdr (reverser l ) ) ) ) ) 
 
 (lcycle (list 1 2 3 4 5))
 (rcycle (list 1 2 3 4 5))

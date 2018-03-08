@@ -6,7 +6,8 @@ The Collatz Lits Exercise requires to write an algorithm that calculates the Col
 
 
 ```
- Write, from scratch, a function in Racket that takes a positive integer n0 as input and returns a list by recursively applying the following operation, starting with the input number.
+ Write, from scratch, a function in Racket that takes a positive integer n0 as input and returns a list 
+ by recursively applying the following operation, starting with the input number.
  ```
 
 <p align="center">
@@ -14,7 +15,8 @@ The Collatz Lits Exercise requires to write an algorithm that calculates the Col
 </p>
 
 ```
-End the recursion when (or if) the number becomes 1. Call the function collatz-list. So, collatz-list should return a list whose first element is n0, the second elementis n1, and so on.
+End the recursion when (or if) the number becomes 1. Call the function collatz-list. So, collatz-list should 
+return a list whose first element is n0, the second elementis n1, and so on.
 
 For example:
 > (collatz-list 5)
@@ -45,5 +47,9 @@ The code for this excercise is a simple funtion that takes a number *n* and call
 
 
 ```
-(define (collatz_list n) (if(> n 1) (cons n (collatz_list (if(odd? n) (+ (* n 3) 1) (/ n 2)))) (cons 1 null) ))
+(define (collatz_list n) (if(> n 1) 
+                            (cons n (collatz_list (if(odd? n) 
+                                                    (+ (* n 3) 1) 
+                                                    (/ n 2)))) 
+                            (cons 1 null)))
 ```

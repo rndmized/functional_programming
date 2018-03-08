@@ -10,7 +10,7 @@ The Collatz Lits Exercise requires to write an algorithm that calculates the Col
  ```
 
 <p align="center">
-<img src="http://bit.ly/2oT1M9g" width="150">
+<img src="https://image.ibb.co/jq4CDS/Tex2_Img_1520537907.png" width="150">
 </p>
 
 ```
@@ -40,7 +40,7 @@ For example:
 The code for this excercise is a simple funtion that takes a number *n* and calls itself recursively while *n* is greater than 1, and appends to the returning list every permutation of *n* that results of the formula:
 
 <p align="center">
-<img src="http://bit.ly/2oT1M9g" width="150">
+<img src="https://image.ibb.co/jq4CDS/Tex2_Img_1520537907.png" width="150">
 </p>
 
 

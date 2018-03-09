@@ -2,11 +2,23 @@
 
 This is a solution for CA Problem Sheets and Exercises for Theory of Algorithms Module (4th Year, Bsc (Hons) in Software Development). 
 
+As part of the challenge the ecercises require to write code **"from scratch"**.
+
+```
+Note that “from scratch” means using only cons, car, cdr, define, lambda, if, null, null?, cond, map, = and
+the basic 
+numerical operators (+, -, *, /, modulo). Other basic functions may be allowed, but please confirm their use with 
+the lecturer.
+```
+
+
 The List Cycler Exercise requires to write an algorithm that cycles a list either left or right, moving either the first element at the back of the list, or the last element to the front of the list as required.
 
 
 ```
- Write, from scratch, two functions in Racket. The first is called lcycle. It takes a list as input and returns the list cyclically shifted one place to the left. The second is called rcycle, and it shifts the list cyclically shifted one place to the right.
+ Write, from scratch, two functions in Racket. The first is called lcycle. It takes a list as input and returns 
+ the list cyclically shifted one place to the left. The second is called rcycle, and it shifts the list cyclically 
+ shifted one place to the right.
  
 For example:
 > (lcycle (list 1 2 3 4 5))

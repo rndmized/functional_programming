@@ -32,7 +32,7 @@ We can break down the algorithm into two helpers plus the ***sublsum*** function
 
 ### Recursive sum
 
-
+This function will return the sum of the elements of the list by recursevely adding its members.
 
 ```
 (define (recursive-sum l) (if (null? l)
@@ -43,6 +43,8 @@ We can break down the algorithm into two helpers plus the ***sublsum*** function
 
 
 ### Sublsum helper
+
+By using the above function, check whether the sum of the element of a list amounts to *zero* and append such element to a list, recursively until the list of elements is empty.
 
 ```
 (define (sublsum-helper l) (if(null? l) 
@@ -57,7 +59,7 @@ We can break down the algorithm into two helpers plus the ***sublsum*** function
 
 ### Sublsum funtion
 
-
+Using both of the previous functions, ***sublsum*** function calls its helper passing as arguments the combinations of the sub-elements of a provided list.
 
 ```
 (define (sublsum l)  (sublsum-helper (combinations l)))

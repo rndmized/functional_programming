@@ -6,9 +6,8 @@ As part of the challenge the ecercises require to write code **"from scratch"**.
 
 ```
 Note that “from scratch” means using only cons, car, cdr, define, lambda, if, null, null?, cond, map, = and
-the basic 
-numerical operators (+, -, *, /, modulo). Other basic functions may be allowed, but please confirm their use with 
-the lecturer.
+the basic numerical operators (+, -, *, /, modulo). Other basic functions may be allowed, but please 
+confirm their use with the lecturer.
 ```
 
 

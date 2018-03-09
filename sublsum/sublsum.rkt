@@ -20,13 +20,13 @@
                             ))
 
 
-(define (sublsum-helper l) ( if(null? l) 
+(define (sublsum-helper l) (if(null? l) 
                                 '()      
                                 (if(= 0 (recursive-sum (car l) ) ) 
                                     (cons (car l) (sublsum-helper (cdr l)) )
                                     (sublsum-helper (cdr l))
                                 )
-                            )  )
+                            ))
 
 
 (define (sublsum l)  (sublsum-helper (combinations l)))

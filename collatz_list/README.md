@@ -2,6 +2,13 @@
 
 This is a solution for CA Problem Sheets and Exercises for Theory of Algorithms Module (4th Year, Bsc (Hons) in Software Development). 
 
+As part of the challenge the excercises require to write code **"from scratch"**.
+
+```
+Note that “from scratch” means using only cons, car, cdr, define, lambda, if, null, null?, cond, map, = and
+the basic numerical operators (+, -, *, /, modulo). Other basic functions may be allowed, but please 
+confirm their use with the lecturer.
+```
 The Collatz Lits Exercise requires to write an algorithm that calculates the Collatz conjecture returning a list containig the resulting sequence.
 
 

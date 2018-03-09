@@ -9,7 +9,9 @@
 ; > (rcycle (list 1 2 3 4 5))
 ; '(5 1 2 3 4)
 
-(define (lcycle l) (append (cdr l) (list (car l))))
+;(define (lcycle l) (append (cdr l) (list (car l))))
+
+(define (lcycle l) (reverser (cons (car l) (reverser (cdr l)))))
 
 
 (define (reverse-helper list item)

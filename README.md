@@ -25,3 +25,35 @@ confirm their use with the lecturer.
 ## DrRacket
 
 Racket is a general-purpose programming language as well as the world’s first ecosystem for developing and deploying new languages. [DrRacket](https://racket-lang.org/) is a graphical IDE that’s integrated with Racket’s vast documentation.
+
+## Excercise List
+
+The following is the list of exercises contained in this repository:
+ 
+* Prime numbers
+* Collatz List
+* Cycle a List (either right or left)
+* Sum of sublist
+* Hamming Weight
+* Hamming Distance
+
+
+## Installation & Running the code
+
+In order to run the exercises Racket must be installed. It can be download from [here](http://racket-lang.org/download/). To run any of the exercises symple type in the command line (*If you areusing windows make sure racket is in the path!*) the following:
+ ```
+    $: racket exercise-name.rkt
+ ```
+Where exercise name corresponds to the file name of the excercise.
+
+## Authors
+
+* **Albert Rando** - *Coding* - [rndmized](https://github.com/rndmized)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/rndmized/functional_programming/blob/master/LICENSE) file for details
+
+## Acknowledgments and References
+
+* DrRacket Documentation: [docs](https://docs.racket-lang.org/).

@@ -2,7 +2,7 @@
 
 This is a solution for CA Problem Sheets and Exercises for Theory of Algorithms Module (4th Year, Bsc (Hons) in Software Development). 
 
-As part of the challenge the ecercises require to write code **"from scratch"**.
+As part of the challenge the excercises require to write code **"from scratch"**.
 
 ```
 Note that “from scratch” means using only cons, car, cdr, define, lambda, if, null, null?, cond, map, = and

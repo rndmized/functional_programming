@@ -1,4 +1,4 @@
-# Hamming Weight
+# Chse
 This is a solution for CA Problem Sheets and Exercises for Theory of Algorithms Module (4th Year, Bsc (Hons) in Software Development). 
 
 As part of the challenge the excercises require to write code **"from scratch"**.
@@ -12,35 +12,41 @@ confirm their use with the lecturer.
 ## Requirements
 
 ```
-Write a function hamming-weight in Racket that takes a list l as input and returns the number of non-zero 
-elements in it. 
+Write a function chse in Racket that takes three lists x, y and z of equal length and
+containing only 0’s and 1’s. It should return a list containing the elements of y in
+the positions where x is 1 and the elements of z otherwise. 
 
 For example:
+> (chse (list 0 0 0 0 1 1 1 1) (list 0 0 1 1 0 0 1 1) (list 0 1 0 1 0 1 0 1))
+'(0 1 0 1 0 0 1 1)
 
-> (hamming-weight (list 1 0 1 0 1 1 1 0))
-5
 ```
-
-
-## Hamming Weight
-
-```The Hamming weight of a string is the number of symbols that are different from the zero-symbol of the alphabet used. It is thus equivalent to the Hamming distance from the all-zero string of the same length. For the most typical case, a string of bits, this is the number of 1's in the string, or the digit sum of the binary representation of a given number and the ℓ₁ norm of a bit vector. In this binary case, it is also called the population count, popcount, sideways sum, or bit summation.```
-
-<p align="right" bold>
-<i>Source: <a href="https://en.wikipedia.org/wiki/Hamming_weight">Wikipedia</a></i>
-</p>
-
 
 ## Racket Code
 
 
-This function will return the sum of the elements of the list by recursevely adding its members, since we are using binary digits, the non-zero elements are 1's, thus the sum of the non-zero elements of the list will be equal to the hamming weight.
+### Helper functions
+
+The first function called distance returns the elements in list **y** (***n2***) when the the elements of list **x** (***n1***) are 1 , and the elements in list **z** (***n3***) when 0.
 
 ```
-(define (hamming-weight l) (if (null? l)
-                                0
-                                (+ (car l) (hamming-weight (cdr l)))
+
+(define (chse-helper n1 n2 n3) ( if(= n1 1 ) 
+                            n2
+                            n3
+                        ))
+```
+
+
+### chse function
+
+Whith the help of the previous function then, we iterate recoursively through the list appending the return value form the chse-helper.
+
+```
+(define (chse l1 l2 l3) (if(null? l1) 
+                                '()      
+                                (cons (chse-helper (car l1) (car l2) (car l3)) (chse (cdr l1) (cdr l2) (cdr l3)))
                             ))
-```
 
+```
 

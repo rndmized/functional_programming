@@ -22,7 +22,7 @@ For example:
 ```
 
 
-## Hamming Weight
+## Hamming Distance
 
 ```In information theory, the Hamming distance between two strings of equal length is the number of positions at which the corresponding symbols are different. In other words, it measures the minimum number of substitutions required to change one string into the other, or the minimum number of errors that could have transformed one string into the other. In a more general context, the Hamming distance is one of several string metrics for measuring the edit distance between two sequences. A major application is in coding theory, more specifically to block codes, in which the equal-length strings are vectors over a finite field.```
 
@@ -36,7 +36,7 @@ For example:
 
 ### Helper functions
 
-The first function called distance returns 1 when te simbols provided are different, in the case of binary (1,0) the addition of two different simbols will be always 1.
+The first function called distance returns 1 when the simbols provided are different, in the case of binary (1,0) the addition of two different simbols will be always 1.
 
 ```
 (define (distance n1 n2) ( if(= 1 (+ n1 n2)) 
@@ -53,9 +53,9 @@ The first function called distance returns 1 when te simbols provided are differ
 Once we know whether two elements in the same position of the list are different we can recursively traverse the lists adding 1 for every different symbol. As a condition for the recursive function to return we asume that both lists have the same length to begin with.
 
 ```
-(define (hamming-distance-helper l1 l2) (if(null? l1) 
+(define (hamming-distance l1 l2) (if(null? l1) 
                                 0      
-                                (+ (distance (car l1) (car l2)) (hamming-distance-helper (cdr l1) (cdr l2)))
+                                (+ (distance (car l1) (car l2)) (hamming-distance (cdr l1) (cdr l2)))
                             ))
 
 ```

@@ -1,4 +1,4 @@
-# Hamming Weight
+# Sod2
 This is a solution for CA Problem Sheets and Exercises for Theory of Algorithms Module (4th Year, Bsc (Hons) in Software Development). 
 
 As part of the challenge the excercises require to write code **"from scratch"**.
@@ -12,35 +12,40 @@ confirm their use with the lecturer.
 ## Requirements
 
 ```
-Write a function hamming-weight in Racket that takes a list l as input and returns the number of non-zero 
-elements in it. 
-
+Write a function sod2 in Racket that takes three lists x, y and z of equal length and
+containing only 0’s and 1’s. It should return a list containing a 1 where the number of
+1’s in a given position in x, y and z contains an odd nubmer of 1’s, and 0 otherwise.
+ 
 For example:
-
-> (hamming-weight (list 1 0 1 0 1 1 1 0))
-5
+> (sod2 (list 0 0 0 0 1 1 1 1) (list 0 0 1 1 0 0 1 1) (list 0 1 0 1 0 1 0 1))
+'(0 1 1 0 1 0 0 1)
+ 
 ```
-
-
-## Hamming Weight
-
-```The Hamming weight of a string is the number of symbols that are different from the zero-symbol of the alphabet used. It is thus equivalent to the Hamming distance from the all-zero string of the same length. For the most typical case, a string of bits, this is the number of 1's in the string, or the digit sum of the binary representation of a given number and the ℓ₁ norm of a bit vector. In this binary case, it is also called the population count, popcount, sideways sum, or bit summation.```
-
-<p align="right" bold>
-<i>Source: <a href="https://en.wikipedia.org/wiki/Hamming_weight">Wikipedia</a></i>
-</p>
 
 
 ## Racket Code
 
 
-This function will return the sum of the elements of the list by recursevely adding its members, since we are using binary digits, the non-zero elements are 1's, thus the sum of the non-zero elements of the list will be equal to the hamming weight.
+### The helper function
+
+Check whether the there are all 0's or two 1's by adding all the numbers in an ***i*** position. The helper function returns either 1 or 0 accordingly.
 
 ```
-(define (hamming-weight l) (if (null? l)
+(define (sod-helper n1 n2 n3) (if(= 0 (+ (+ n1 n2) n3))
                                 0
-                                (+ (car l) (hamming-weight (cdr l)))
+                                (if(= 2 (+ (+ n1 n2) n3))
+                                0
+                                1
+)))
+```
+
+### sod2 function
+
+Recursive function that sends elements of the list of a given position and append the returning values from the helper function.
+
+```
+(define (sod2 l1 l2 l3) (if(null? l1) 
+                                '()      
+                                (cons (sod-helper (car l1) (car l2) (car l3)) (sod2 (cdr l1) (cdr l2) (cdr l3)))
                             ))
 ```
-
-

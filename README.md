@@ -36,6 +36,10 @@ The following is the list of exercises contained in this repository:
 * Sum of sublist
 * Hamming Weight
 * Hamming Distance
+* Maj
+* Chse
+* Sod2
+* lstq
 
 
 ## Installation & Running the code

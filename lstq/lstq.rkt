@@ -10,3 +10,13 @@
 ; 54.61
 
 
+; subtract elements of the list in a given position and square them, then add them together.
+
+(define (residual-sum n1 n2) (* (- n1 n2) (- n1 n2)))
+
+(define (lstq l1 l2) (if(null? l1) 
+                                0      
+                                (+ (residual-sum (car l1) (car l2)) (lstq (cdr l1) (cdr l2)))
+                            ))
+
+(lstq (list 4.5 5.1 6.2 7.8) (list 1.1 -0.1 6.1 3.8))

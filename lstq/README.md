@@ -11,7 +11,7 @@ confirm their use with the lecturer.
 ```
 
 
-The lsqt Exercise requires to write an algorithm that takes two list of equal length and ..... [ TODO ]
+The lsqt Exercise requires to write an algorithm that subtract elements of the list in a given position and square them, then add them together.
 
 ```
  Write a function lstq in Racket that takes as arguments two lists l and m of equal length and containing 
@@ -29,3 +29,24 @@ For example:
 
 ## Racket Code
 
+### The helper function
+
+
+***residual-sum*** function returns (n1-n2)^2.
+
+```
+(define (residual-sum n1 n2) (* (- n1 n2) (- n1 n2)))
+```
+
+
+
+### lstq
+
+Recursively add the returning value of ***residual-sum***.
+
+```
+(define (lstq l1 l2) (if(null? l1) 
+                                0      
+                                (+ (residual-sum (car l1) (car l2)) (lstq (cdr l1) (cdr l2)))
+                            ))
+```
